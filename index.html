@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: hsl(221, 100%, 96%);
+        font-family: 'Hanken Grotesk', sans-serif;
+      }
+
+      .container {
+        display: flex;
+        width: 50%;
+        background-color: hsl(0, 0%, 100%);
+        margin: 100px auto;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+      }
+
+      .result-container {
+        width: 55%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        border-radius: 15px;
+        background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+        padding: 20px;
+      }
+
+      .result-container .head {
+        font-size: 16px;
+        padding: 15px 0;
+        font-weight: bold;
+        font-size: 18px;
+        color: rgb(226, 219, 219);
+      }
+
+      .result-container .round {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        text-align: center;
+        background: linear-gradient(
+          hsla(256, 72%, 46%, 1),
+          hsla(241, 72%, 46%, 0)
+        );
+      }
+
+      .summary-container {
+        display: flex;
+        width: 45%;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px;
+        gap: 20px;
+      }
+
+      .summary-head {
+        color: black;
+        font-weight: bold;
+        font-size: 22px;
+      }
+
+      .bar-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .bar {
+        width: 100%;
+        background-color: red;
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+
+        border-radius: 10px;
+      }
+
+      .score {
+        margin-left: auto;
+      }
+
+      .bar1 {
+        background-color: hsla(0, 100%, 67%, 0.1);
+        color: hsl(0, 100%, 67%);
+      }
+
+      .bar2 {
+        background-color: hsla(39, 100%, 56%, 0.1);
+        color: hsl(39, 100%, 56%);
+      }
+
+      .bar3 {
+        background-color: hsla(166, 100%, 37%, 0.1);
+        color: hsl(166, 100%, 37%);
+      }
+
+      .bar4 {
+        background-color: hsl(221, 100%, 96%);
+        color: hsl(224, 30%, 27%);
+      }
+
+      button {
+        background: hsl(224, 30%, 27%);
+        padding: 10px;
+        color: white;
+        border-radius: 30px;
+        font-weight: bold;
+      }
+
+      .collection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .text-main {
+        padding-top: 30px;
+        font-weight: bolder;
+        font-size: 48px;
+      }
+      .text-sec {
+        padding: 12px;
+        color: rgb(221, 219, 219);
+        font-weight: 600;
+      }
+
+      .message {
+        font-size: 26px;
+        font-weight: 600;
+      }
+
+      .final {
+        width: 70%;
+        text-align: center;
+        color: rgb(221, 219, 219);
+      }
+
+      @media only screen and (max-width: 1250px) {
+        .container {
+          flex-direction: column;
+          width: 40%;
+        }
+
+        .result-container {
+          width: 100%;
+          border-bottom-right-radius: 30px;
+          border-bottom-left-radius: 30px;
+        }
+
+        .summary-container {
+          margin-top: 10px;
+          width: 100%;
+          padding: 15px;
+        }
+        .bar-container {
+          padding: 15px;
+        }
+
+        .bar {
+          min-width: 100%;
+          width: 75%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="result-container">
+        <p class="head">Your Result</p>
+        <div class="round">
+          <div class="collection">
+            <p class="text-main">76</p>
+            <p class="text-sec">of 100</p>
+          </div>
+        </div>
+        <p class="message">Great</p>
+        <p class="final">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      <div class="summary-container">
+        <p class="summary-head">Summary</p>
+        <div class="bar-container">
+          <div class="bar bar1">
+            <img src="./assets/images/icon-reaction.svg" />
+            <p>Reaction</p>
+            <p class="score">80 / 100</p>
+          </div>
+          <div class="bar bar2">
+            <img src="./assets/images/icon-memory.svg" />
+            <p>Memory</p>
+            <p class="score">92 / 100</p>
+          </div>
+          <div class="bar bar3">
+            <img src="./assets/images/icon-verbal.svg" />
+            <p>Vebal</p>
+            <p class="score">61 / 100</p>
+          </div>
+          <div class="bar bar4">
+            <img src="./assets/images/icon-visual.svg" />
+            <p>Visual</p>
+            <p class="score">72 / 100</p>
+          </div>
+        </div>
+        <button>Continue</button>
+      </div>
+    </div>
+  </body>
+</html>
